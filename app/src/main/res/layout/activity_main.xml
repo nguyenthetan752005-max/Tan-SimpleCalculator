@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Khu vực hiển thị / Display Area -->
+    <LinearLayout
+        android:id="@+id/displayArea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:background="#EEEEEE"
+        android:orientation="vertical"
+        android:gravity="end|bottom"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGrid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Dòng hiển thị phép tính (nhỏ) / Calculation display (small) -->
+        <TextView
+            android:id="@+id/tvHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#757575"
+            android:textSize="20sp" />
+
+        <!-- Dòng hiển thị số hiện tại (to) / Current input display (large) -->
+        <TextView
+            android:id="@+id/tvDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- GridLayout chứa các nút bấm / GridLayout to hold the buttons -->
+    <GridLayout
+        android:id="@+id/buttonGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:columnCount="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button android:id="@+id/btn1" android:layout_width="80dp" android:layout_height="80dp" android:layout_margin="4dp" android:text="1" />
+        <Button android:id="@+id/btn2" android:layout_width="80dp" android:layout_height="80dp" android:layout_margin="4dp" android:text="2" />
+        <Button android:id="@+id/btn3" android:layout_width="80dp" android:layout_height="80dp" android:layout_margin="4dp" android:text="3" />
+        <Button android:id="@+id/btnAdd" android:layout_width="80dp" android:layout_height="80dp" android:layout_margin="4dp" android:text="+" />
+
+        <Button android:id="@+id/btn4" android:layout_width="80dp" android:layout_height="80dp" android:layout_margin="4dp" android:text="4" />
+        <Button android:id="@+id/btn5" android:layout_width="80dp" android:layout_height="80dp" android:layout_margin="4dp" android:text="5" />
+        <Button android:id="@+id/btn6" android:layout_width="80dp" android:layout_height="80dp" android:layout_margin="4dp" android:text="6" />
+        <Button android:id="@+id/btnSub" android:layout_width="80dp" android:layout_height="80dp" android:layout_margin="4dp" android:text="-" />
+
+        <Button android:id="@+id/btn7" android:layout_width="80dp" android:layout_height="80dp" android:layout_margin="4dp" android:text="7" />
+        <Button android:id="@+id/btn8" android:layout_width="80dp" android:layout_height="80dp" android:layout_margin="4dp" android:text="8" />
+        <Button android:id="@+id/btn9" android:layout_width="80dp" android:layout_height="80dp" android:layout_margin="4dp" android:text="9" />
+        <Button android:id="@+id/btnMul" android:layout_width="80dp" android:layout_height="80dp" android:layout_margin="4dp" android:text="x" />
+
+        <Button android:id="@+id/btnClear" android:layout_width="80dp" android:layout_height="80dp" android:layout_margin="4dp" android:text="C" />
+        <Button android:id="@+id/btnDelete" android:layout_width="80dp" android:layout_height="80dp" android:layout_margin="4dp" android:text="DEL" />
+        <Button android:id="@+id/btn0" android:layout_width="80dp" android:layout_height="80dp" android:layout_margin="4dp" android:text="0" />
+        <Button android:id="@+id/btnDiv" android:layout_width="80dp" android:layout_height="80dp" android:layout_margin="4dp" android:text="/" />
+
+        <Button android:id="@+id/btnDot" android:layout_width="80dp" android:layout_height="80dp" android:layout_margin="4dp" android:text="." />
+        <Button
+            android:id="@+id/btnEqual"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnSpan="3"
+            android:layout_gravity="fill_horizontal"
+            android:layout_margin="4dp"
+            android:text="=" />
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
